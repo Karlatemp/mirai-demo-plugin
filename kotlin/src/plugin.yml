@@ -1,0 +1,12 @@
+# 这是Mirai插件信息文件配置
+
+# name: 你的插件名字
+name: RawDemo-Kotlin
+# author: 此插件的作者
+author: Karlatemp
+# main: 你的主类名字, 需要继承 PluginBase
+main: io.github.karlatemp.mirai.demo.kotlin.PluginMain
+# version: 插件版本
+version: "1.0"
+# info: 一句显示, 用处未知
+info: "My Demo"
