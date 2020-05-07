@@ -10,8 +10,8 @@ package io.github.karlatemp.mirai.demo.java;
 
 import net.mamoe.mirai.console.plugins.PluginBase;
 import net.mamoe.mirai.contact.MemberPermission;
-import net.mamoe.mirai.message.ContactMessage;
-import net.mamoe.mirai.message.GroupMessage;
+import net.mamoe.mirai.message.GroupMessageEvent;
+import net.mamoe.mirai.message.MessageEvent;
 import net.mamoe.mirai.message.data.At;
 import net.mamoe.mirai.message.data.Image;
 import net.mamoe.mirai.message.data.SingleMessage;
@@ -27,7 +27,7 @@ public class PluginMain extends PluginBase {
     @Override
     public void onEnable() {
         // 我们使用GroupMessage监听来着群聊的信息
-        getEventListener().subscribeAlways(GroupMessage.class, event -> {
+        getEventListener().subscribeAlways(GroupMessageEvent.class, event -> {
             // 具体的处理可以看
             // https://github.com/mamoe/mirai-demos/blob/master/mirai-demo-java/src/main/java/demo/BlockingTest.java
             {
@@ -58,7 +58,7 @@ public class PluginMain extends PluginBase {
         });
 
         // 使用ContactMessage监听全部信息
-        getEventListener().subscribeAlways(ContactMessage.class, event -> {
+        getEventListener().subscribeAlways(MessageEvent.class, event -> {
         });
     }
 
